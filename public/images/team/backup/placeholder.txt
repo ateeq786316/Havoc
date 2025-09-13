@@ -1,0 +1,29 @@
+# Team Backup Images Placeholder
+
+This directory should contain backup images for team members:
+
+## Required Images:
+- sufyan.jpg (300x300px)
+- ateeq.jpg (300x300px)  
+- member1.jpg (300x300px)
+- member2.jpg (300x300px)
+- member3.jpg (300x300px)
+- member4.jpg (300x300px)
+- member5.jpg (300x300px)
+- member6.jpg (300x300px)
+- member7.jpg (300x300px)
+
+## Image Guidelines:
+- Format: JPG or PNG
+- Size: 300x300 pixels (square)
+- Quality: High resolution for web display
+- Style: Professional headshots with consistent lighting
+- Background: Neutral or transparent
+
+## Fallback Behavior:
+If these images are not available, the system will use a default placeholder image.
+
+## Adding Images:
+1. Add the images to this directory
+2. Ensure they match the naming convention above
+3. Test the About page to verify images load correctly
