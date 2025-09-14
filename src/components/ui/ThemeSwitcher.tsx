@@ -20,20 +20,20 @@ const presetThemes = [
       border: '#c4c0ab',
     },
   },
-  {
-    name: 'Royal Premium',
-    colors: {
-      bg: '#ede8d0',
-      surface: '#c4c0ab',
-      card: '#9d9988',
-      primary: '#777567',
-      secondary: '#545248',
-      accent: '#33312b',
-      text: '#141410',
-      muted: '#545248',
-      border: '#777567',
-    },
-  },
+  // {
+  //   name: 'Royal Premium',
+  //   colors: {
+  //     bg: '#ede8d0',
+  //     surface: '#c4c0ab',
+  //     card: '#9d9988',
+  //     primary: '#777567',
+  //     secondary: '#545248',
+  //     accent: '#33312b',
+  //     text: '#141410',
+  //     muted: '#545248',
+  //     border: '#777567',
+  //   },
+  // },
   {
     "name": "Ocean Blue",
     "colors": {
@@ -73,20 +73,22 @@ const presetThemes = [
       "muted": "#a8a8a8",
       "border": "#533483"
     }
-  },{
-    "name": "Sunset Orange",
-    "colors": {
-      "bg": "#fff5eb",
-      "surface": "#ffe0cc",
-      "card": "#ffccaa",
-      "primary": "#ff8c42",
-      "secondary": "#ff6b1a",
-      "accent": "#c73e1d",
-      "text": "#5d4037",
-      "muted": "#bcaaa4",
-      "border": "#ffab91"
-    }
-  },{
+  },
+  // {
+  //   "name": "Sunset Orange",
+  //   "colors": {
+  //     "bg": "#fff5eb",
+  //     "surface": "#ffe0cc",
+  //     "card": "#ffccaa",
+  //     "primary": "#ff8c42",
+  //     "secondary": "#ff6b1a",
+  //     "accent": "#c73e1d",
+  //     "text": "#5d4037",
+  //     "muted": "#bcaaa4",
+  //     "border": "#ffab91"
+  //   }
+  // },
+  {
     "name": "Lavender Purple",
     "colors": {
       "bg": "#f3e5f5",
@@ -125,20 +127,22 @@ const presetThemes = [
       "muted": "#66bb6a",
       "border": "#81c784"
     }
-  },{
-    "name": "Golden Yellow",
-    "colors": {
-      "bg": "#fffde7",
-      "surface": "#fff9c4",
-      "card": "#fff59d",
-      "primary": "#fbc02d",
-      "secondary": "#f9a825",
-      "accent": "#f57f17",
-      "text": "#f57f17",
-      "muted": "#ffd54f",
-      "border": "#ffeb3b"
-    }
-  },{
+  },
+  // {
+  //   "name": "Golden Yellow",
+  //   "colors": {
+  //     "bg": "#fffde7",
+  //     "surface": "#fff9c4",
+  //     "card": "#fff59d",
+  //     "primary": "#fbc02d",
+  //     "secondary": "#f9a825",
+  //     "accent": "#f57f17",
+  //     "text": "#f57f17",
+  //     "muted": "#ffd54f",
+  //     "border": "#ffeb3b"
+  //   }
+  // },
+  {
     "name": "Steel Gray",
     "colors": {
       "bg": "#eceff1",
@@ -151,33 +155,35 @@ const presetThemes = [
       "muted": "#78909c",
       "border": "#90a4ae"
     }
-  },{
-    "name": "Coral Pink",
-    "colors": {
-      "bg": "#fce4ec",
-      "surface": "#f8bbd0",
-      "card": "#f48fb1",
-      "primary": "#ec407a",
-      "secondary": "#d81b60",
-      "accent": "#880e4f",
-      "text": "#880e4f",
-      "muted": "#f06292",
-      "border": "#f48fb1"
-    }
-  },{
-    "name": "Sky Blue",
-    "colors": {
-      "bg": "#e1f5fe",
-      "surface": "#b3e5fc",
-      "card": "#81d4fa",
-      "primary": "#039be5",
-      "secondary": "#0288d1",
-      "accent": "#01579b",
-      "text": "#01579b",
-      "muted": "#4fc3f7",
-      "border": "#29b6f6"
-    }
   },
+  // {
+  //   "name": "Coral Pink",
+  //   "colors": {
+  //     "bg": "#fce4ec",
+  //     "surface": "#f8bbd0",
+  //     "card": "#f48fb1",
+  //     "primary": "#ec407a",
+  //     "secondary": "#d81b60",
+  //     "accent": "#880e4f",
+  //     "text": "#880e4f",
+  //     "muted": "#f06292",
+  //     "border": "#f48fb1"
+  //   }
+  // },
+  // {
+  //   "name": "Sky Blue",
+  //   "colors": {
+  //     "bg": "#e1f5fe",
+  //     "surface": "#b3e5fc",
+  //     "card": "#81d4fa",
+  //     "primary": "#039be5",
+  //     "secondary": "#0288d1",
+  //     "accent": "#01579b",
+  //     "text": "#01579b",
+  //     "muted": "#4fc3f7",
+  //     "border": "#29b6f6"
+  //   }
+  // },
 ];
 
 const ThemeSwitcher: React.FC = () => {
@@ -206,8 +212,9 @@ const ThemeSwitcher: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full right-0 mt-2 w-64 bg-card border border-border rounded-xl shadow-lg z-50"
-          >
+            className="absolute top-full right-0 mt-2 w-64 bg-card border border-border rounded-xl shadow-lg z-50
+                        max-md:left-1/2 max-md:-translate-x-1/2 max-md:right-auto"
+                        >
             <div className="p-4">
               <h3 className="text-sm font-semibold text-text mb-3">
                 Choose Theme
