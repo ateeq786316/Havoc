@@ -208,48 +208,50 @@ const ThemeSwitcher: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: -10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            transition={{ duration: 0.15 }}
-            className="absolute top-full right-0 mt-2 w-64 bg-card border border-border rounded-xl shadow-lg z-50
-                        max-md:left-1/2 max-md:-translate-x-1/2 max-md:right-auto"
-                        >
-            <div className="p-4">
-              <h3 className="text-sm font-semibold text-text mb-3">
-                Choose Theme
-              </h3>
-              
-              <div className="space-y-2">
-                {presetThemes.map((theme, index) => (
-                  <motion.button
-                    key={index}
-                    onClick={() => handleThemeSelect(theme)}
-                    className="w-full flex items-center justify-between p-3 md:p-3 rounded-lg hover:bg-surface/50 transition-colors"
-                    whileHover={{ x: 2 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className="flex space-x-1">
-                        {Object.values(theme.colors).slice(0, 4).map((color, i) => (
-                          <div
-                            key={i}
-                            className="w-4 h-4 rounded-full border border-border/20"
-                            style={{ backgroundColor: color }}
-                          />
-                        ))}
-                      </div>
-                      <span className="text-sm text-text">{theme.name}</span>
-                    </div>
-                    
-                    {JSON.stringify(currentTheme) === JSON.stringify(theme.colors) && (
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                    )}
-                  </motion.button>
-                ))}
-              </div>
+  initial={{ opacity: 0, scale: 0.95, y: -10 }}
+  animate={{ opacity: 1, scale: 1, y: 0 }}
+  exit={{ opacity: 0, scale: 0.95, y: -10 }}
+  transition={{ duration: 0.15 }}
+  className="absolute top-full right-0 mt-2 w-64 bg-card border border-border rounded-xl shadow-lg z-50
+              max-md:left-1/2 max-md:-translate-x-1/2 max-md:right-auto"
+>
+  <div className="p-4">
+    <h3 className="text-sm font-semibold text-text mb-3">
+      Choose Theme
+    </h3>
+
+    {/* Scrollable Container */}
+    <div className="space-y-2 max-h-[60vh] overflow-y-auto pr-2">
+      {presetThemes.map((theme, index) => (
+        <motion.button
+          key={index}
+          onClick={() => handleThemeSelect(theme)}
+          className="w-full flex items-center justify-between p-3 md:p-3 rounded-lg hover:bg-surface/50 transition-colors"
+          whileHover={{ x: 2 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          <div className="flex items-center space-x-3">
+            <div className="flex space-x-1">
+              {Object.values(theme.colors).slice(0, 4).map((color, i) => (
+                <div
+                  key={i}
+                  className="w-4 h-4 rounded-full border border-border/20"
+                  style={{ backgroundColor: color }}
+                />
+              ))}
             </div>
-          </motion.div>
+            <span className="text-sm text-text">{theme.name}</span>
+          </div>
+
+          {JSON.stringify(currentTheme) === JSON.stringify(theme.colors) && (
+            <div className="w-2 h-2 bg-primary rounded-full" />
+          )}
+        </motion.button>
+      ))}
+    </div>
+  </div>
+</motion.div>
+
         )}
       </AnimatePresence>
     </div>
