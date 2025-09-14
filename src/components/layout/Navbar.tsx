@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden border-t border-border bg-card/80 backdrop-blur-md"
+              className="md:hidden border-t border-border bg-card/80 backdrop-blur-md pl-4"
             >
               <div className="px-4 py-4 space-y-4">
                 {navItems.map((item) => (
@@ -151,8 +151,10 @@ const Navbar: React.FC = () => {
                     {item.name}
                   </Link>
                 ))}
-                <div className="flex items-center justify-between pt-4 border-t border-border">
+                <div className="flex items-center justify-between pt-4 border-t border-border px-4">
+                 <div className="relative pl-2"> {/* Added wrapper with left padding */}
                   <ThemeSwitcher />
+                  </div>
                   <Link
                     to="/consultation"
                     onClick={() => handleNavClick('/consultation')}
