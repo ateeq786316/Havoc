@@ -90,7 +90,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <motion.section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-bg via-surface to-card overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-bg via-surface to-card overflow-hidden pt - 16"
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
