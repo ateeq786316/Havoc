@@ -79,7 +79,7 @@ const AdminLogin: React.FC = () => {
           <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
             <p className="text-sm text-yellow-800">
               <strong>Super Admin:</strong> <code className="bg-yellow-100 px-1 rounded">havocsolutions1@gmail.com</code> / 
-              <code className="bg-yellow-100 px-1 rounded">Havocsuperadmin@786316</code>
+              <code className="bg-yellow-100 px-1 rounded">*********</code>
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ const AdminLogin: React.FC = () => {
           </Button>
         </form>
 
-        <div className="mt-6 text-center">
+        {/* <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Don't have an admin account?{' '}
             <button
@@ -140,7 +140,7 @@ const AdminLogin: React.FC = () => {
               Initial Setup
             </button>
           </p>
-        </div>
+        </div> */}
 
         <div className="mt-6 text-center">
           <button
