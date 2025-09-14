@@ -221,7 +221,7 @@ const ThemeSwitcher: React.FC = () => {
     </h3>
 
     {/* Scrollable Container */}
-    <div className="space-y-2 max-h-[60vh] overflow-y-auto pr-2">
+    <div className="space-y-2 max-h-[20vh] overflow-y-auto pr-2">
       {presetThemes.map((theme, index) => (
         <motion.button
           key={index}
