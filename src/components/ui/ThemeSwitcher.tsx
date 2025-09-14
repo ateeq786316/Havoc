@@ -218,7 +218,7 @@ const ThemeSwitcher: React.FC = () => {
                   <motion.button
                     key={index}
                     onClick={() => handleThemeSelect(theme)}
-                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-surface/50 transition-colors"
+                    className="w-full flex items-center justify-between p-3 md:p-3 rounded-lg hover:bg-surface/50 transition-colors"
                     whileHover={{ x: 2 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
